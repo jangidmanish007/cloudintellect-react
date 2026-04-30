@@ -25,9 +25,7 @@ export default async function TestimonalsPage() {
       ...testimonialsPageData,
       successtoriesData: successStoriesRes.result,
     };
-  } 
-
-  console.log('testimonialsPageData',testimonialsPageData)
+  }  
   
   return (
     <>

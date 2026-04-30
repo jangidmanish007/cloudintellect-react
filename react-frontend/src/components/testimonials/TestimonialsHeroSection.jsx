@@ -38,9 +38,7 @@ export default function TestimonialsHeroSection({ pageData }) {
           backgroundPosition: 'center', }}
         aria-hidden="true"
       />
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 z-[1] bg-black/50" />
+ 
 
       {/* Content container */}
       <div className="relative z-[2] w-full max-w-[1280px] mx-auto px-6 py-14 md:py-20">

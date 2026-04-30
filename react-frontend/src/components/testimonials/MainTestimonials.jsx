@@ -4,9 +4,7 @@ import TestimonialsGrid from "./TestimonialsGrid";
 import MoreSuccessStoriesSection from "./MoreSuccessStoriesSection";
 import BeNextSuccessStorySection from "./BeNextSuccessStorySection";
 
-export default function MainTestimonials({ testimonialsPageData }) {
-
-  console.log('testimonialsPageData', testimonialsPageData)
+export default function MainTestimonials({ testimonialsPageData }) { 
   return (
     <>
       <TestimonialsHeroSection pageData={testimonialsPageData?.pageData} />
