@@ -1,0 +1,165 @@
+/**
+ * Excon font family (from Excon_Complete.zip)
+ * Use: font-family: 'Excon', sans-serif;
+ * Weights: 100 (Thin), 300 (Light), 400 (Regular), 500 (Medium), 700 (Bold), 900 (Black)
+ */
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Thin.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Thin.woff') format('woff');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Light.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Regular.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Medium.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Bold.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Excon';
+  src: url('/Excon_Complete/Fonts/WEB/fonts/Excon-Black.woff2') format('woff2'),
+       url('/Excon_Complete/Fonts/WEB/fonts/Excon-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/**
+ * Ranade font family (from Ranade_Complete.zip)
+ * Use when needed: font-family: 'Ranade', sans-serif; or var(--font-ranade)
+ * Weights: 100 (Thin), 300 (Light), 400 (Regular), 500 (Medium), 700 (Bold)
+ * Not the default font.
+ */
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Thin.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Thin.woff') format('woff');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Light.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Regular.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Medium.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Bold.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Ranade italic */
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Italic.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-Italic.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ranade';
+  src: url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-BoldItalic.woff2') format('woff2'),
+       url('/Ranade_Complete/Fonts/WEB/fonts/Ranade-BoldItalic.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+
+/**
+ * Segoe UI This (from segoe-ui-this.zip)
+ * Use when needed: font-family: 'Segoe UI This', sans-serif; or var(--font-segoe-ui)
+ * Weights: 400 (Regular), 600 (Semibold), 700 (Bold). Not the default font.
+ */
+@font-face {
+  font-family: 'Segoe UI This';
+  src: url('/SegoeUI/segoeuithis.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI This';
+  src: url('/SegoeUI/segoeuithisi.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Segoe UI This';
+  src: url('/SegoeUI/segoeuithibd.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe UI This';
+  src: url('/SegoeUI/segoeuithisz.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}

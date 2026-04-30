@@ -1,0 +1,47 @@
+{
+  "title": "An Illustrious",
+  "titleHighlight": "Legacy we continue to Shape",
+  "stats": [
+    {
+      "number": "5000+",
+      "label": "LEARNERS TRAINED",
+      "description": "Continuous skill development across India."
+    },
+    {
+      "number": "1400+",
+      "label": "SUCCESSFUL PLACEMENTS",
+      "description": "Students placed in top MNCs & Salesforce partner companies."
+    },
+    {
+      "number": "20+",
+      "label": "EXPERT MENTORS",
+      "description": "Certified Salesforce professionals from leading global firms."
+    },
+    {
+      "number": "150+",
+      "label": "CORPORATE CLIENTS",
+      "description": "Strong industry network supporting Salesforce careers."
+    },
+    {
+      "number": "10+",
+      "label": "YEARS EXPERTISE",
+      "description": "Backed by the strength of a Salesforce Ridge Partner company."
+    }
+  ],
+  "cards": [
+    {
+      "image": "images/home/lagacy-bg-img-1.webp",
+      "title": "Salesforce to Create 1.8 Million Jobs in India by 2028",
+      "description": "Salesforce is powering major job growth in India, creating real opportunities for tech talent.",
+      "tags": "Tech Growth | Salesforce",
+      "href": "#"
+    },
+    {
+      "image": "images/home/lagacy-bg-img-2.webp",
+      "title": "Salesforce Hiring Surges Again in 2025",
+      "description": "Salesforce roles are growing fast in 2025, especially for Admins and Developers.",
+      "tags": "ACHIEVEMENT | CIBSUMMIT",
+      "href": "#"
+    }
+  ]
+}

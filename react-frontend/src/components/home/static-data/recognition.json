@@ -1,0 +1,46 @@
+{
+  "title": "Proudly Recognized for",
+  "titleHighlight": "Our Excellence in Salesforce Training & Industry Alignment",
+  "blocks": [
+    {
+      "category": "RECOGNIZED STATUS",
+      "image": "images/home/workforce-img.webp",
+      "title": "Workforce Partner",
+      "subheading": "Salesforce Workforce Development Partner",
+      "description": "Cloud Intellect is officially listed as a Salesforce Workforce Development Partner, acknowledged for delivering high-quality, industry-ready Salesforce training programs.",
+      "bullets": [
+        "Training aligned with Salesforce standards",
+        "Certification-focused modules",
+        "Real-world learning outcomes"
+      ]
+    },
+    {
+      "category": "RECOGNIZED RANK",
+      "image": "images/home/saleforce-img.webp",
+      "title": "Ridge Partner",
+      "subheading": "Salesforce Ridge Consulting Partner (via Cloud Intellect Systems)",
+      "description": "Our consulting division, Cloud Intellect Systems, is a Salesforce Ridge Partner, enabling real-time project exposure for learners.",
+      "bullets": ["Enterprise project experience", "Live org scenarios", "Consulting-level learning environment"]
+    },
+    {
+      "category": "VERIFIED OUTCOMES",
+      "image": "images/home/star-img.webp",
+      "title": "Top Ranked",
+      "subheading": "Training & Industry Reputation",
+      "description": "Ranked Among India's Trusted Salesforce Institutes based on learner success, mentorship quality, and placement outcomes.",
+      "bullets": ["Expert mentors", "Strong placement network", "Verified student success"]
+    },
+    {
+      "category": "GLOBAL STANDARDS",
+      "image": "images/home/share-img.webp",
+      "title": "Accredited",
+      "subheading": "Ecosystem Accreditations",
+      "description": "Follows official Salesforce learning frameworks, compliant with global certification guidelines.",
+      "bullets": [
+        "Follows official learning frameworks",
+        "Recognized training pathways",
+        "Aligned with Salesforce roles"
+      ]
+    }
+  ]
+}
