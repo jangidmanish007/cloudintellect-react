@@ -29,7 +29,7 @@ export default function TestimonialsHeroSection({ pageData }) {
 
   return (
     <section
-      className="relative w-full min-h-[600px] flex items-center pt-[206px] overflow-hidden"
+      className="relative w-full min-h-[600px] flex items-center pt-[130px] md:pt-[206px] overflow-hidden"
     > 
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -43,7 +43,7 @@ export default function TestimonialsHeroSection({ pageData }) {
       <div className="absolute inset-0 z-[1] bg-black/50" />
 
       {/* Content container */}
-      <div className="relative z-[2] w-full max-w-[1280px] mx-auto px-6 py-20">
+      <div className="relative z-[2] w-full max-w-[1280px] mx-auto px-6 py-14 md:py-20">
         <div className="flex flex-col gap-6 max-w-[750px]">
 
           {/* Tag pill */}

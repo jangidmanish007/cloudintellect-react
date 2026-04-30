@@ -1,4 +1,4 @@
-import MainTestimonals from "@/components/testimonals/MainTestimonials";
+import MainTestimonals from "@/components/testimonials/MainTestimonials";
 import { getPageBySlug } from "@/_services/homeService";
 import { getTestimonials } from "@/_services/testimonialsService";
 
@@ -18,9 +18,7 @@ export default async function TestimonalsPage() {
       ...testimonialsPageData,
       testimonials: testimonialsRes.result,
     };
-  }
-
-  console.log('hello', testimonialsPageData)
+  } 
 
   return (
     <>

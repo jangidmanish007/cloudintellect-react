@@ -121,7 +121,7 @@ export default function TestimonialsGrid({ testimonials = [], pageData }) {
 
           {/* Section title */}
           <h2 className="text-[#1E1E1E] lg:text-[48px] md:text-[36px] sm:text-[28px] text-[28px] font-bold mb-4 md:mb-[60px] md:mb-10 leading-tight">
-            {sectionTitle}
+            {sectionTitle} 
           </h2> 
           <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6 md:gap-5 mt-10">
             {testimonials.map((testimonial, index) => {
@@ -146,7 +146,7 @@ export default function TestimonialsGrid({ testimonials = [], pageData }) {
                   {/* Image wrapper */}
                   <div
                     className={[
-                      "relative w-full h-full min-h-[500px] md:min-h-[450px] sm:min-h-[400px] overflow-hidden flex flex-col group",
+                      "relative w-full h-full min-h-[450px] md:min-h-[500px] max-h-[540px] overflow-hidden flex flex-col group",
                       hasVideo ? "cursor-pointer" : "cursor-default",
                     ].join(" ")}
                     onClick={() => hasVideo && handleVideoClick(testimonial)}
@@ -198,11 +198,11 @@ export default function TestimonialsGrid({ testimonials = [], pageData }) {
                       }}
                     >
                       <div className="w-full flex flex-col gap-2">
-                        <h3 className="text-white text-[24px] sm:text-[20px] font-medium m-0 leading-[1.2]">
+                        <h3 className="text-white text-[20px] sm:text-[24px] font-medium m-0 leading-[1.2]">
                           {testimonial.name}
                         </h3>
                         {testimonial.role && (
-                          <p className="text-white text-[10px] sm:text-[14px] font-normal m-0">
+                          <p className="text-white text-[14px] sm:text-[10px] font-normal m-0">
                             {testimonial.role}
                           </p>
                         )}

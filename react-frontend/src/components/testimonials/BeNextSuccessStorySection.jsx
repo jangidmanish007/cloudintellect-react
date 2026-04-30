@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function BeNextSuccessStorySection({ pageData }) {
@@ -22,7 +23,7 @@ export default function BeNextSuccessStorySection({ pageData }) {
       <div className="max-w-[1280px] mx-auto">
 
         {/* Card */}
-        <div className="bg-[#F8F9FA] rounded-[32px] md:rounded-3xl lg:py-24 md:py-16 py-12 px-10 flex flex-col align-items-center justify-contet-center text-center">
+        <div className="bg-[#F8FAFC] border border-[#0000001A] rounded-[32px] md:rounded-3xl lg:py-16 md:py-16 py-10 px-10 flex flex-col align-items-center justify-contet-center text-center">
 
           <h2 className="text-black text-[24px] md:text-[34px] font-bold leading-[1.2] m-0 mb-6">
             {heading}

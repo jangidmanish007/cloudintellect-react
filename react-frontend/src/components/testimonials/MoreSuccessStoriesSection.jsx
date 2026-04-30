@@ -1,3 +1,4 @@
+`'use client'`
 import { getSuccessStories } from "@/_services/homeService";
 
 // ─── Star rating ──────────────────────────────────────────────────────────────
