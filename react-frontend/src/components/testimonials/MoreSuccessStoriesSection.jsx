@@ -27,10 +27,9 @@ const resolveImageUrl = (path) => {
 };
 
 // ─── Component ────────────────────────────────────────────────────────────────
-export default async function MoreSuccessStoriesSection({ pageData }) {
+export default  function MoreSuccessStoriesSection({ pageData ,successStories}) {
   // Fetch success stories server-side
-  const res = await getSuccessStories();
-  const stories = res?.result || [];
+  const stories =successStories;
 
   if (!stories.length) return null;
 

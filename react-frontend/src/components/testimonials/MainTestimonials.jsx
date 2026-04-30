@@ -5,6 +5,8 @@ import MoreSuccessStoriesSection from "./MoreSuccessStoriesSection";
 import BeNextSuccessStorySection from "./BeNextSuccessStorySection";
 
 export default function MainTestimonials({ testimonialsPageData }) {
+
+  console.log('testimonialsPageData', testimonialsPageData)
   return (
     <>
       <TestimonialsHeroSection pageData={testimonialsPageData?.pageData} />
@@ -12,7 +14,7 @@ export default function MainTestimonials({ testimonialsPageData }) {
         testimonials={testimonialsPageData?.testimonials || []}
         pageData={testimonialsPageData?.pageData}
       />
-      <MoreSuccessStoriesSection pageData={testimonialsPageData?.pageData} />
+      <MoreSuccessStoriesSection pageData={testimonialsPageData?.pageData} successStories={testimonialsPageData?.successtoriesData}/>
       <BeNextSuccessStorySection pageData={testimonialsPageData?.pageData} />
     </>
   );

@@ -11,10 +11,10 @@ export default async function Home() {
   }
 
   // student success stories
-  // const successStoriesRes = await getSuccessStories();
-  // if (successStoriesRes?.status) {
-  //   homePageData = { ...homePageData, successStories: successStoriesRes.result };
-  // }
+  const successStoriesRes = await getSuccessStories();
+  if (successStoriesRes?.status) {
+    homePageData = { ...homePageData, successStories: successStoriesRes.result };
+  }
 
   return (
     <>

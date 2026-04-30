@@ -1,5 +1,5 @@
 import MainTestimonals from "@/components/testimonials/MainTestimonials";
-import { getPageBySlug } from "@/_services/homeService";
+import { getPageBySlug, getSuccessStories } from "@/_services/homeService";
 import { getTestimonials } from "@/_services/testimonialsService";
 
 export default async function TestimonalsPage() {
@@ -19,7 +19,16 @@ export default async function TestimonalsPage() {
       testimonials: testimonialsRes.result,
     };
   } 
+ const successStoriesRes = await getSuccessStories();
+  if (successStoriesRes?.status) {
+   testimonialsPageData = {
+      ...testimonialsPageData,
+      successtoriesData: successStoriesRes.result,
+    };
+  } 
 
+  console.log('testimonialsPageData',testimonialsPageData)
+  
   return (
     <>
       <MainTestimonals testimonialsPageData={testimonialsPageData} />
