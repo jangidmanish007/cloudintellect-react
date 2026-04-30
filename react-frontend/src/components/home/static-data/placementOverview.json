@@ -1,0 +1,21 @@
+{
+  "label": "Placements Overview",
+  "headlinePart1": "The World's",
+  "headlineBold": "Leading Companies Hire",
+  "headlinePart2": "Our Talent",
+  "applyButtonText": "Apply Today",
+  "applyButtonHref": "#apply",
+  "viewPlacementsText": "View Placements",
+  "viewPlacementsHref": "#placements",
+  "statsTop": [
+    { "value": "1400+", "label": "Successful Placements" },
+    { "value": "300+", "label": "Hiring Partners" },
+    { "value": "32.5 LPA", "label": "Highest National Package" }
+  ],
+  "statsBottom": [
+    { "value": "15", "label": "Packages Offered by Top Companies" },
+    { "value": "10", "label": "Packages Offered by Leading IT Firms" },
+    { "value": "7", "label": "Packages Offered by Mid & Large Enterprises" },
+    { "value": "5", "label": "Packages Offered by Consulting & Startup Companies" }
+  ]
+}
