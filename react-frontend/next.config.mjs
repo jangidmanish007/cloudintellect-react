@@ -41,6 +41,7 @@ const nextConfig = {
     HERO_APPLICATION_SUBMIT: "hero-application/submit",
     GET_HEADER_CAROUSEL: "header-carousel",
     GET_SUCCESS_STORIES: "success-stories",
+    GET_TESTIMONIALS: "testimonials",
 
     // ─── Auth ─────────────────────────────────────────────────────
     ADMIN_LOGIN: "auth/login",
