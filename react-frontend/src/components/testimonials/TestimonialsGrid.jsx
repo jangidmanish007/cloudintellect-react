@@ -26,7 +26,7 @@ const getYouTubeVideoId = (url) => {
     if (u.hostname === "youtu.be" && u.pathname.slice(1)) {
       return u.pathname.slice(1).split(/[?#&]/)[0];
     }
-  } catch (_) {}
+  } catch (_) { }
 
   return null;
 };
@@ -35,14 +35,6 @@ const getYouTubeThumbnail = (videoId) =>
   videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : null;
 
 // ─── Image URL resolver ───────────────────────────────────────────────────────
-
-const resolveImageUrl = (path) => {
-  if (!path || typeof path !== "string") return "";
-  if (/^(https?:)?\/\//i.test(path) || /^data:/i.test(path)) return path;
-  const base = process.env.NEXT_PUBLIC_DYNAMIC_IMG_BASE_PATH || "";
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-};
 
 // ─── Card background colours (cycling) ───────────────────────────────────────
 
@@ -121,20 +113,20 @@ export default function TestimonialsGrid({ testimonials = [], pageData }) {
 
           {/* Section title */}
           <h2 className="text-[#1E1E1E] lg:text-[48px] md:text-[36px] sm:text-[28px] text-[28px] font-bold mb-4 md:mb-[60px] md:mb-10 leading-tight">
-            {sectionTitle} 
-          </h2> 
+            {sectionTitle}
+          </h2>
           <div className="grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6 md:gap-5 mt-10">
             {testimonials.map((testimonial, index) => {
               const videoId = testimonial.videoUrl
                 ? getYouTubeVideoId(testimonial.videoUrl)
                 : null;
               const thumbnailUrl = testimonial.coverPhoto
-                ? resolveImageUrl(testimonial.coverPhoto)
+                ? process.env.NEXT_PUBLIC_DYNAMIC_IMG_BASE_PATH + testimonial.coverPhoto
                 : videoId
-                ? getYouTubeThumbnail(videoId)
-                : testimonial.image
-                ? resolveImageUrl(testimonial.image)
-                : null;
+                  ? getYouTubeThumbnail(videoId)
+                  : testimonial.image
+                    ? process.env.NEXT_PUBLIC_DYNAMIC_IMG_BASE_PATH + testimonial.image
+                    : null;
               const hasVideo = !!testimonial.videoUrl;
               const bgColor = BG_COLORS[index % BG_COLORS.length];
 

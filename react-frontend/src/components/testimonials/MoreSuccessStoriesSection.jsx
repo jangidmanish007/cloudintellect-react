@@ -17,19 +17,10 @@ function StarRating({ count = 5 }) {
   );
 }
 
-// ─── Image URL resolver ───────────────────────────────────────────────────────
-const resolveImageUrl = (path) => {
-  if (!path || typeof path !== "string") return "";
-  if (/^(https?:)?\/\//i.test(path) || /^data:/i.test(path)) return path;
-  const base = process.env.DYNAMIC_IMG_BASE_PATH || "";
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-};
-
 // ─── Component ────────────────────────────────────────────────────────────────
-export default  function MoreSuccessStoriesSection({ pageData ,successStories}) {
+export default function MoreSuccessStoriesSection({ pageData, successStories }) {
   // Fetch success stories server-side
-  const stories =successStories;
+  const stories = successStories;
 
   if (!stories.length) return null;
 
@@ -64,7 +55,7 @@ export default  function MoreSuccessStoriesSection({ pageData ,successStories}) 
                 <div className="flex items-center gap-3 min-w-0 flex-1">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={resolveImageUrl(review.profileImage)}
+                    src={process.env.DYNAMIC_IMG_BASE_PATH + review.profileImage}
                     alt=""
                     width={48}
                     height={48}

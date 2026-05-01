@@ -44,6 +44,7 @@ const nextConfig = {
     GET_TESTIMONIALS: "testimonials",
     GET_FAQ: "faq",
     GET_ALUMNI: "alumni-success",
+    GET_ALUMNI_PROFILE: "alumni",
     // ─── Auth ─────────────────────────────────────────────────────
     ADMIN_LOGIN: "auth/login",
   },

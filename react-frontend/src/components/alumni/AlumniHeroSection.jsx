@@ -1,27 +1,16 @@
 import Link from "next/link";
 
-// ─── Image URL resolver ───────────────────────────────────────────────────────
-const resolveImageUrl = (path) => {
-  if (!path || typeof path !== "string") return "";
-  if (/^https?:\/\//i.test(path)) return path;
-  const base = process.env.NEXT_PUBLIC_IMG_PATH || "";
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-};
 
 export default function AlumniHeroSection({ pageData }) {
   const hero = pageData?.content?.hero || {};
 
-  const backgroundImage = hero.backgroundImage || hero.bgImage || "images/BG (2).webp"; 
+  const backgroundImage = hero.backgroundImage || hero.bgImage || "images/BG (2).webp";
   const heading = hero.heading || hero.title || "Our Alumni Are Building Real Careers in Salesforce";
   const description = hero.description || hero.subtitle || "Different starts, one choice to learn Salesforce right. Now working on real projects.";
   const primaryButtonText = hero.primaryButtonText || hero.primaryBtnText || "Explore Program";
   const primaryButtonHref = hero.primaryButtonHref || hero.primaryBtnHref || "#";
   const secondaryButtonText = hero.secondaryButtonText || hero.secondaryBtnText || "View Placement";
   const secondaryButtonHref = hero.secondaryButtonHref || hero.secondaryBtnHref || "#";
-
-  const imageUrl = resolveImageUrl(backgroundImage);
-
   // Determine if buttons are external / hash links
   const isExternal = (href) =>
     !href || href === "#" || /^(https?:\/\/|mailto:|tel:|#)/.test(href);
@@ -32,28 +21,30 @@ export default function AlumniHeroSection({ pageData }) {
       {/* Background image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${process.env.NEXT_PUBLIC_IMG_PATH}images/alumni/BG.webp')`,
+        style={{
+          backgroundImage: `url('${process.env.NEXT_PUBLIC_IMG_PATH}images/alumni/BG.webp')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center', }}
+          backgroundPosition: 'center',
+        }}
         aria-hidden="true"
       />
- 
+
       {/* Content */}
-          <div className="relative z-[2] w-full max-w-[1280px] mx-auto px-6 py-14 md:py-20">
-        <div className="flex flex-col gap-6 max-w-[750px]"> 
- 
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/95 rounded-full w-fit">
+      <div className="relative z-[2] w-full max-w-[1280px] mx-auto px-6 py-14 md:py-20">
+        <div className="flex flex-col gap-6 max-w-[750px]">
+
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/95 rounded-full w-fit">
             <span
               className="w-2 h-2 rounded-full bg-[#009FFF] shrink-0"
               aria-hidden="true"
             />
             <span className="text-[#1E1E1E] text-[11px] font-semibold tracking-[0.5px] uppercase font-sans">
-                { hero.tag || hero.label||"SUCCESS STORIES"}
+              {hero.tag || hero.label || "SUCCESS STORIES"}
             </span>
           </div>
 
           {/* Heading */}
-         <h1 className="text-white text-[36px] sm:text-[48px] lg:text-[58px] font-bold leading-[1.2] m-0">
+          <h1 className="text-white text-[36px] sm:text-[48px] lg:text-[58px] font-bold leading-[1.2] m-0">
             {heading}
           </h1>
 

@@ -3,18 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-// ─── Image URL resolver ───────────────────────────────────────────────────────
-const resolveImageUrl = (path) => {
-  if (!path || typeof path !== "string") return "";
-  if (/^(https?:)?\/\//i.test(path) || /^data:/i.test(path)) return path;
-  const base = process.env.DYNAMIC_IMG_BASE_PATH || "";
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized}`;
-};
-
-const DEFAULT_FAQ_IMAGE =
-  "https://cloudintellect.in/wp-content/uploads/2026/01/IMG-5-1.webp";
-
 // ─── Component ────────────────────────────────────────────────────────────────
 export default function FaqSection({ pageData }) {
   const faq = pageData?.content?.faq || {};
@@ -47,7 +35,7 @@ export default function FaqSection({ pageData }) {
   // ── Hero background ───────────────────────────────────────────────────────
   const bgPath =
     typeof faq.backgroundImage === "string" ? faq.backgroundImage.trim() : "";
-  const bgUrl = bgPath ? resolveImageUrl(bgPath) : "";
+  const bgUrl = bgPath ? process.env.DYNAMIC_IMG_BASE_PATH + faq.backgroundImage : "";
 
   // ── CTA block ─────────────────────────────────────────────────────────────
   const cta = faq.cta && typeof faq.cta === "object" ? faq.cta : {};
@@ -56,17 +44,17 @@ export default function FaqSection({ pageData }) {
   const ctaButtonText = (cta.buttonText || "").trim();
   const ctaButtonHref = (cta.buttonHref || "").trim();
   const badgeText = (cta.badgeText || "").trim();
-  const badgeImageUrl = cta.badgeImage ? resolveImageUrl(cta.badgeImage) : "";
+  const badgeImageUrl = cta.badgeImage ? process.env.DYNAMIC_IMG_BASE_PATH + cta.badgeImage : "";
   const featureTexts = Array.isArray(cta.features)
     ? cta.features
-        .map((f) => {
-          if (!f) return "";
-          if (typeof f === "string") return f.trim();
-          if (typeof f === "object")
-            return (f.text || f.label || "").toString().trim();
-          return "";
-        })
-        .filter(Boolean)
+      .map((f) => {
+        if (!f) return "";
+        if (typeof f === "string") return f.trim();
+        if (typeof f === "object")
+          return (f.text || f.label || "").toString().trim();
+        return "";
+      })
+      .filter(Boolean)
     : [];
   const shouldRenderCta = !!(
     ctaTitle ||
@@ -85,17 +73,19 @@ export default function FaqSection({ pageData }) {
 
   return (
     <>
-      {/* ── Hero banner ── */} 
-<section
-      className="relative w-full min-h-[600px] flex items-center pt-[130px] md:pt-[206px] overflow-hidden"
-    > 
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${bgUrl}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center', }}
-        aria-hidden="true"
-      /> 
+      {/* ── Hero banner ── */}
+      <section
+        className="relative w-full min-h-[600px] flex items-center pt-[130px] md:pt-[206px] overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('${bgUrl}')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          aria-hidden="true"
+        />
         <div
           className="absolute inset-0"
           style={{
@@ -103,7 +93,7 @@ export default function FaqSection({ pageData }) {
               "linear-gradient(180deg, rgba(7,15,28,0.55) 0%, rgba(7,15,28,0.68) 100%)",
           }}
         />
-    </section>
+      </section>
       {/* ── FAQ accordion section ── */}
       <section
         className="py-20 px-[60px] lg:py-[60px] lg:px-6 sm:py-10 sm:px-4 min-h-[620px]"
