@@ -121,11 +121,11 @@ export default function TestimonialsGrid({ testimonials = [], pageData }) {
                 ? getYouTubeVideoId(testimonial.videoUrl)
                 : null;
               const thumbnailUrl = testimonial.coverPhoto
-                ? process.env.NEXT_PUBLIC_DYNAMIC_IMG_BASE_PATH + testimonial.coverPhoto
+                ? testimonial.coverPhoto
                 : videoId
                   ? getYouTubeThumbnail(videoId)
                   : testimonial.image
-                    ? process.env.NEXT_PUBLIC_DYNAMIC_IMG_BASE_PATH + testimonial.image
+                    ? testimonial.image
                     : null;
               const hasVideo = !!testimonial.videoUrl;
               const bgColor = BG_COLORS[index % BG_COLORS.length];
