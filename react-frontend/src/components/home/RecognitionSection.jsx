@@ -60,7 +60,7 @@ export default function RecognitionSection() {
               key={i}
               variants={blockItem}
               className={[
-                'flex flex-col sm:flex-row gap-6 py-8',
+                'flex flex-col sm:flex-row gap-4 py-6',
                 i === 0 ? 'pt-0' : '',
                 i < blocks.length - 1 ? 'border-b border-[#e5e2da]' : 'pb-0',
               ]
@@ -70,12 +70,12 @@ export default function RecognitionSection() {
               {/* ── Left ── */}
               <div className="flex flex-row items-center gap-0 sm:w-[30%] shrink-0">
                 {/* Badge / Logo */}
-                <div className="w-[114px] min-h-[88px] rounded-[12px] p-3 flex items-center justify-start shrink-0">
+                <div className="lg:w-[114px] w-[90px] lg:min-h-[88px] min-h-[64px] rounded-[12px] p-3 flex items-center justify-start shrink-0">
                   <img
                     src={`${process.env.NEXT_PUBLIC_IMG_PATH}${block.image}`}
                     alt=""
                     loading="lazy"
-                    className="max-w-full max-h-[72px] w-auto h-auto object-contain block"
+                    className="max-w-full lg:max-h-[72px] max-h-[54px] w-auto h-auto object-contain block"
                   />
                 </div>
 
